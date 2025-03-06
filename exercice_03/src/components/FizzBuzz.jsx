@@ -22,7 +22,7 @@ const FizzBuzz = () => {
         }else if(number%3==0){
             setMessage("FIZZ")
         }else{
-            setMessage("")
+            setMessage("...")
         }
     })
 
