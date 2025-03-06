@@ -15,13 +15,15 @@ const NomInput = (e) => {
 
   return (
     <>
+    <div className='container'>
     <label htmlFor="prenom">Prénom: </label>
     <input type="text" id='prenom' value={prenom} onInput={prenomInput}/>
 
     <label htmlFor="nom">Nom: </label>
     <input type="text" id='nom' value={nom} onInput={NomInput}/>
 
-    <p>Bonjour <b>{prenom} {nom.toUpperCase()}</b>, bienvenue sur l'application !</p>
+    <p>Bonjour <span className='bold'>{prenom} {nom.toUpperCase()}</span>, bienvenue sur l'application !</p>
+    </div>
     </>
   )
 }
