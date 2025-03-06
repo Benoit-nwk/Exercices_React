@@ -1,38 +1,39 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const FizzBuzz = () => {
     const [number, setNumber] = useState(0);
-    const [message, setMessage] = useState("");
-
-
 
     const incrementButton = ()=>{
-        setNumber(previousNumber => previousNumber+1)
+        setNumber(number+1)
     }
 
     const decrementButton = ()=>{
-        setNumber(previousNumber =>previousNumber-1)
+        setNumber(number-1)
     }
 
-    useEffect(()=>{
-        if(number%5==0 && number%3==0){
-            setMessage("FIZZ-BUZZ")
-        }else if(number%5==0){
-            setMessage("BUZZ")
-        }else if(number%3==0){
-            setMessage("FIZZ")
-        }else{
-            setMessage("...")
-        }
-    })
+const render = () => {
+
+    if(number%5==0 && number%3==0){
+        return "fizzbuzz"
+    }else if(number%5==0){
+        return "buzz"
+    }else if(number%3==0){
+        return "fizz"
+    }else{
+        return "..."
+    }
+
+}
+
+        
 
 
     return ( 
         <> 
-        <button onClick={decrementButton}>-</button>
+        <button onClick={decrementButton} disabled={number <=0}>-</button>
         <span>{number}</span>
-        <button onClick={incrementButton}>+</button>
-        <p>{message}</p>
+        <button onClick={incrementButton} disabled={number>=50}>+</button>
+        <p>{render()}</p>
         </>
      );
 }
