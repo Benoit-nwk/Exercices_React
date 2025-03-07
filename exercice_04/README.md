@@ -1,12 +1,21 @@
-# React + Vite
+# Exercice React 4
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Objectif
+Créer une application React affichant en temps réel le contenu de deux champs de saisie (inputs) sous la forme d'un nom complet.
 
-Currently, two official plugins are available:
+## Instructions
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1. Création de l'Interface
+- Mettre en place deux champs de saisie : un pour le prénom et un pour le nom de famille.
 
-## Expanding the ESLint configuration
+### 2. Affichage Dynamique
+- Sous les deux champs, afficher un paragraphe qui se met à jour automatiquement en fonction des saisies.
+- Le texte doit suivre le format : "Bonjour [Prénom] [NOM DE FAMILLE], bienvenue sur l'application !"
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. Mise en Forme du Texte
+- Le prénom doit rester tel qu'il est saisi.
+- Le nom de famille doit être affiché en majuscules.
+- L'ensemble du nom complet doit être mis en gras.
+
+### 4. Utilisation de Templating HTML
+- Assurez-vous que la mise en forme du texte est gérée via le templating HTML pour une intégration directe dans le rendu de l'application
